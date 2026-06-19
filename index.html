@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colombia en México · Mundial 2026 · Guía</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--am:#FCD116;--az:#003087;--ro:#CE1126;--ve:#006847;--ne:#0D0D0D;--gr:#F5F6FA;--bl:#FFFFFF;--or:#E85D04;--do:#C9A84C;--tx:#1A1A2E;--t2:#555770}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#EFF1F8;color:var(--tx)}
+@media print{body{background:white}.nav{display:none}.hero{height:55vh;min-height:400px}.place-card,.rest-card{page-break-inside:avoid}}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(0,0,0,.88);backdrop-filter:blur(14px);display:flex;align-items:center;gap:4px;padding:10px 24px;overflow-x:auto}
+.nav a{color:#bbb;text-decoration:none;font-size:11px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;padding:5px 10px;border-radius:4px;white-space:nowrap;transition:all .2s}
+.nav a:hover{color:var(--am);background:rgba(252,209,22,.12)}
+.nav-logo{color:var(--am);font-family:'Bebas Neue';font-size:22px;margin-right:10px;flex-shrink:0}
+
+/* HERO */
+.hero{height:100vh;min-height:580px;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:64px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.pexels.com/photos/1884574/pexels-photo-1884574.jpeg?auto=compress&cs=tinysrgb&w=1920');background-size:cover;background-position:center}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(155deg,rgba(0,48,135,.82) 0%,rgba(0,0,0,.25) 55%,rgba(206,17,38,.65) 100%)}
+.flag-bar{position:absolute;top:0;left:0;right:0;height:8px;display:flex}
+.flag-bar span{flex:1}
+.fy{background:#FCD116}.fb{background:#003087}.fr{background:#CE1126}
+.fg{background:transparent;flex:.35}
+.mg{background:#006847}.mw{background:#FFF}.mr{background:#CE1126}
+.hero-c{position:relative;z-index:2;text-align:center;color:#fff}
+.hero-ey{font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--am);margin-bottom:14px}
+.hero-t{font-family:'Bebas Neue';font-size:clamp(60px,11vw,128px);line-height:.9;letter-spacing:2px;margin-bottom:10px}
+.hero-t span{color:var(--am)}
+.hero-s{font-family:'Playfair Display';font-style:italic;font-size:clamp(16px,2.5vw,24px);color:rgba(255,255,255,.88);margin-bottom:34px}
+.hero-pills{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.pill{background:rgba(255,255,255,.14);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.28);border-radius:40px;padding:7px 18px;font-size:12.5px;font-weight:600;color:#fff}
+.pill strong{color:var(--am)}
+
+/* WRAPPER */
+.w{max-width:1100px;margin:0 auto;padding:0 24px}
+
+/* SECTION */
+.sec{padding:60px 0}
+.sec-lbl{display:inline-flex;align-items:center;gap:8px;font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--do);margin-bottom:8px}
+.sec-lbl::before{content:'';display:block;width:26px;height:2px;background:var(--do)}
+.sec-title{font-family:'Bebas Neue';font-size:clamp(36px,5.5vw,58px);line-height:1;letter-spacing:1px;color:var(--az);margin-bottom:12px}
+.sec-title.w2{color:#fff}
+.sec-desc{font-size:14.5px;color:var(--t2);line-height:1.72;max-width:700px}
+.sec-dk{background:var(--ne);color:#fff}
+.sec-dk .sec-title{color:#fff}
+.sec-dk .sec-desc{color:rgba(255,255,255,.68)}
+
+/* CITY DIVIDER */
+.cdiv{height:6px;background:linear-gradient(90deg,var(--am) 0%,var(--az) 33%,var(--ro) 66%,var(--ve) 100%)}
+
+/* MATCH CARDS */
+.match-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:38px}
+@media(max-width:680px){.match-grid{grid-template-columns:1fr}}
+.mc{border-radius:16px;overflow:hidden;box-shadow:0 18px 55px rgba(0,0,0,.32)}
+.mc-bg{height:190px;position:relative;background-size:cover;background-position:center}
+.mc-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.18),rgba(0,0,0,.72))}
+.mc-teams{position:absolute;bottom:14px;left:0;right:0;z-index:2;display:flex;align-items:center;justify-content:center;gap:14px;font-family:'Bebas Neue';font-size:26px;color:#fff;letter-spacing:1px}
+.vs{background:var(--am);color:var(--az);border-radius:50%;width:34px;height:34px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;flex-shrink:0}
+.mc-body{background:#fff;padding:18px 20px}
+.mc-body h3{font-size:10.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--do);margin-bottom:10px}
+.mir{display:flex;gap:7px;align-items:flex-start;margin-bottom:7px}
+.mi-ico{font-size:14px;flex-shrink:0;margin-top:1px}
+.mi-txt{font-size:13px;color:var(--tx);line-height:1.5}
+.mi-txt strong{color:var(--az)}
+.mbadge{display:inline-block;color:#fff;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 9px;border-radius:4px;margin-top:8px}
+
+/* FAN FEST */
+.ff-hero{border-radius:18px;overflow:hidden;position:relative;height:300px;margin-top:38px}
+.ff-hero img{width:100%;height:100%;object-fit:cover}
+.ff-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(120,0,0,.88) 0%,rgba(0,0,0,.35) 100%)}
+.ff-ov{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:36px}
+.ff-t{font-family:'Bebas Neue';font-size:50px;color:#fff;line-height:1}
+.ff-t span{color:var(--am)}
+.ff-s{color:rgba(255,255,255,.82);font-size:13.5px;margin-top:8px;line-height:1.6;max-width:480px}
+.ff-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
+@media(max-width:580px){.ff-grid{grid-template-columns:1fr}}
+.ffc{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:18px 20px}
+.ffc h4{font-family:'Bebas Neue';font-size:21px;color:var(--am);margin-bottom:6px;letter-spacing:.4px}
+.ffc p{font-size:12.5px;color:rgba(255,255,255,.72);line-height:1.65}
+.fftag{display:inline-block;background:var(--am);color:var(--ne);font-size:9.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;border-radius:3px;margin-bottom:6px}
+
+/* CITY HERO */
+.ch{border-radius:18px;overflow:hidden;height:360px;position:relative;margin-bottom:44px}
+.ch img{width:100%;height:100%;object-fit:cover}
+.ch::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,48,135,.78) 0%,rgba(0,0,0,.1) 55%,rgba(0,104,71,.52) 100%)}
+.ch.mty::after{background:linear-gradient(135deg,rgba(0,30,100,.82) 0%,rgba(0,0,0,.12) 60%,rgba(0,30,100,.42) 100%)}
+.ch-txt{position:absolute;bottom:28px;left:32px;z-index:2;color:#fff}
+.ch-txt h2{font-family:'Bebas Neue';font-size:55px;line-height:1;letter-spacing:1px}
+.ch-txt p{font-size:13.5px;color:rgba(255,255,255,.8);margin-top:4px;max-width:460px;line-height:1.5}
+
+/* PLACE CARDS */
+.pg{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:14px}
+@media(max-width:640px){.pg{grid-template-columns:1fr}}
+.pc{background:#fff;border-radius:15px;overflow:hidden;box-shadow:0 3px 22px rgba(0,0,0,.08);transition:transform .25s,box-shadow .25s}
+.pc:hover{transform:translateY(-4px);box-shadow:0 12px 38px rgba(0,0,0,.14)}
+
+/* Photo grid — 3 images: 1 big top + 2 small bottom */
+.ppg{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:155px 95px;gap:3px;background:#eee}
+.ppg img{width:100%;height:100%;object-fit:cover;display:block}
+.ppg img:first-child{grid-column:1/-1}
+
+/* Photo grid — 4 images: 2x2 */
+.ppg4{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:125px 125px;gap:3px;background:#eee}
+.ppg4 img{width:100%;height:100%;object-fit:cover;display:block}
+
+.pb{padding:18px 20px 22px}
+.pmeta{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:8px}
+.tdur{font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:2px 8px;border-radius:20px;background:#EEF2FF;color:var(--az)}
+.tpri{font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:2px 8px;border-radius:20px;background:#FFF8E1;color:#7B5800}
+.pc h3{font-family:'Playfair Display';font-size:19px;color:var(--ne);margin-bottom:7px;font-weight:700}
+.pc p{font-size:13px;color:var(--t2);line-height:1.7}
+.pc ul{margin-top:9px;padding-left:0;list-style:none}
+.pc li{font-size:12.5px;color:var(--t2);padding:2.5px 0 2.5px 15px;position:relative;line-height:1.6}
+.pc li::before{content:'→';position:absolute;left:0;color:var(--ve);font-size:11px;top:4px}
+.ptip{margin-top:11px;background:#E8F5E9;border-left:3px solid var(--ve);padding:7px 11px;border-radius:0 6px 6px 0;font-size:12px;color:#1B5E20;font-style:italic;line-height:1.55}
+
+/* SECTION TAB */
+.stab{display:inline-flex;align-items:center;gap:6px;color:#fff;border-radius:7px;padding:5px 13px;font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:24px}
+.stab-ve{background:var(--ve)}
+.stab-az{background:var(--az)}
+
+/* RESTAURANT */
+.rh2{display:flex;align-items:center;gap:14px;margin-bottom:28px;margin-top:52px;flex-wrap:wrap}
+.rh2 h2{font-family:'Bebas Neue';font-size:38px;color:var(--ne)}
+.fbadge{color:#fff;padding:5px 12px;border-radius:5px;font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
+.fbadge-ve{background:var(--ve)}
+.fbadge-az{background:var(--az)}
+
+/* Gastro hero — 4 photos strip */
+.gh{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3px;height:190px;border-radius:12px;overflow:hidden;margin-bottom:22px}
+.gh img{width:100%;height:100%;object-fit:cover}
+
+.rg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:6px}
+@media(max-width:780px){.rg{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.rg{grid-template-columns:1fr}}
+.rc{background:#fff;border-radius:13px;overflow:hidden;box-shadow:0 3px 14px rgba(0,0,0,.07);transition:transform .2s,box-shadow .2s}
+.rc:hover{transform:translateY(-3px);box-shadow:0 8px 26px rgba(0,0,0,.12)}
+
+/* Rest photos — 2 side by side */
+.rp{display:grid;grid-template-columns:1fr 1fr;gap:2px;height:140px}
+.rp img{width:100%;height:100%;object-fit:cover}
+.rp img:only-child{grid-column:1/-1}
+
+.rb{padding:14px 16px 18px}
+.rn{font-family:'Playfair Display';font-size:16px;font-weight:700;color:var(--ne);margin-bottom:3px}
+.rt{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--ve);margin-bottom:7px}
+.rt.az{color:var(--az)}
+.rd{font-size:12px;color:var(--t2);line-height:1.65;margin-bottom:8px}
+.rpr{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px}
+.pmx{font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;background:#FFF3E0;color:#E65100}
+.pco{font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;background:#E8EAF6;color:var(--az)}
+.rmust{font-size:11.5px;color:var(--t2);line-height:1.55}
+.rmust strong{color:var(--ne)}
+
+/* INFO BOXES */
+.wbox{background:#FFF3E0;border-left:4px solid var(--or);border-radius:0 10px 10px 0;padding:13px 17px;margin-top:18px;font-size:13px;color:#5D2E00;line-height:1.65}
+.wbox strong{color:var(--or)}
+.gbox{background:#E8F5E9;border-left:4px solid var(--ve);border-radius:0 10px 10px 0;padding:13px 17px;margin:0 0 22px;font-size:13px;color:#1B5E20;line-height:1.65}
+.gbox strong{color:#1B5E20}
+
+/* TIPS */
+.tg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+@media(max-width:700px){.tg{grid-template-columns:1fr}}
+.tc{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);border-radius:13px;padding:20px 22px}
+.tc-ico{font-size:26px;margin-bottom:8px}
+.tc h4{font-family:'Bebas Neue';font-size:20px;color:var(--am);letter-spacing:.4px;margin-bottom:7px}
+.tc p,.tc li{font-size:12px;color:rgba(255,255,255,.72);line-height:1.65}
+.tc ul{padding-left:0;list-style:none}
+.tc li{padding:2px 0 2px 13px;position:relative}
+.tc li::before{content:'·';position:absolute;left:0;color:var(--am);font-size:17px;top:-3px}
+.vg{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px}
+.vi{background:rgba(255,255,255,.07);border-radius:5px;padding:6px 10px}
+.vi .mx{font-weight:700;color:var(--am);font-size:12.5px}
+.vi .co{font-size:11.5px;color:rgba(255,255,255,.6)}
+
+/* BUDGET TABLE */
+.bt{width:100%;border-collapse:collapse;margin-top:26px;font-size:13.5px}
+.bt th{background:var(--az);color:#fff;padding:11px 14px;font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;text-align:left}
+.bt td{padding:10px 14px;border-bottom:1px solid #E8EBF2}
+.bt tr:nth-child(even) td{background:#F5F6FA}
+.bt tr:hover td{background:#EEF2FF}
+.bt .tot td{background:var(--am);font-weight:700;font-size:13.5px;color:var(--ne);border:none}
+
+/* FOOTER */
+footer{background:var(--ne);color:rgba(255,255,255,.45);text-align:center;padding:30px 24px;font-size:12px}
+footer strong{color:var(--am)}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <span class="nav-logo">⚽</span>
+  <a href="#partidos">Partidos</a>
+  <a href="#fanfest">Fan Fest</a>
+  <a href="#guadalajara">Guadalajara</a>
+  <a href="#gdl-food">Comer GDL</a>
+  <a href="#monterrey">Monterrey</a>
+  <a href="#mty-food">Comer MTY</a>
+  <a href="#tips">Tips</a>
+  <a href="#presupuesto">Presupuesto</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="flag-bar"><span class="fy"></span><span class="fb"></span><span class="fr"></span><span class="fg"></span><span class="mg"></span><span class="mw"></span><span class="mr"></span></div>
+  <div class="hero-bg"></div>
+  <div class="hero-c">
+    <p class="hero-ey">Copa del Mundo FIFA 2026™</p>
+    <h1 class="hero-t">COLOMBIA<br><span>EN MÉXICO</span></h1>
+    <p class="hero-s">Guadalajara &amp; Monterrey · 21 al 28 de Junio</p>
+    <div class="hero-pills">
+      <div class="pill">🇨🇴 <strong>Col vs RD Congo</strong> · 23 Jun · GDL</div>
+      <div class="pill">🇰🇷 <strong>Corea vs Sudáfrica</strong> · 24 Jun · MTY</div>
+      <div class="pill">🎉 <strong>FIFA Fan Fest</strong> · Gratis en las dos ciudades</div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTIDOS -->
+<section class="sec sec-dk" id="partidos">
+<div class="w">
+  <span class="sec-lbl">Los partidos</span>
+  <h2 class="sec-title w2"></h2>
+  <p class="sec-desc">Colombia ya ganó 3-1 a Uzbekistán y lidera el Grupo K. RD Congo empató 1-1 con Portugal. El ambiente va a ser tremendo.</p>
+  <div class="match-grid">
+    <div class="mc">
+      <div class="mc-bg" style="background-image:url('https://images.pexels.com/photos/1884574/pexels-photo-1884574.jpeg?auto=compress&cs=tinysrgb&w=800')">
+        <div class="mc-teams">🇨🇴 COLOMBIA <div class="vs">VS</div> RD CONGO 🇨🇩</div>
+      </div>
+      <div class="mc-body">
+        <h3>⚽ Grupo K · Segunda Jornada</h3>
+        <div class="mir"><span class="mi-ico">📅</span><span class="mi-txt"><strong>Martes 23 de junio de 2026</strong></span></div>
+        <div class="mir"><span class="mi-ico">🕘</span><span class="mi-txt"><strong>9:00 PM Colombia</strong> · 8:00 PM hora México</span></div>
+        <div class="mir"><span class="mi-ico">🏟</span><span class="mi-txt"><strong>Estadio Akron</strong> · Zapopan, Guadalajara, Jalisco</span></div>
+        <div class="mir"><span class="mi-ico">📺</span><span class="mi-txt">Caracol · RCN · DSports · Disney+ · Paramount+</span></div>
+        <div class="mir"><span class="mi-ico">💬</span><span class="mi-txt">Colombia lidera con 3 pts (+2 GD). Una victoria prácticamente nos clasifica. RD Congo es peligroso — empató 1-1 con Portugal. Partido clave.</span></div>
+        <span class="mbadge" style="background:var(--ro)">🔴 PARTIDO DE CLASIFICACIÓN</span>
+      </div>
+    </div>
+    <div class="mc">
+      <div class="mc-bg" style="background-image:url('https://images.pexels.com/photos/46798/the-ball-stadion-football-the-pitch-46798.jpeg?auto=compress&cs=tinysrgb&w=800')">
+        <div class="mc-teams">🇰🇷 COREA <div class="vs">VS</div> SUDÁFRICA 🇿🇦</div>
+      </div>
+      <div class="mc-body">
+        <h3>⚽ Grupo A · Tercera Jornada</h3>
+        <div class="mir"><span class="mi-ico">📅</span><span class="mi-txt"><strong>Miércoles 24 de junio de 2026</strong></span></div>
+        <div class="mir"><span class="mi-ico">🕖</span><span class="mi-txt"><strong>8:00 PM Colombia</strong> · 7:00 PM hora México</span></div>
+        <div class="mir"><span class="mi-ico">🏟</span><span class="mi-txt"><strong>Estadio BBVA</strong> · Guadalupe, Nuevo León — Monterrey</span></div>
+        <div class="mir"><span class="mi-ico">🇲🇽</span><span class="mi-txt">Simultáneo con México vs Chequia. Partido que define quién clasifica del Grupo A junto a México.</span></div>
+        <div class="mir"><span class="mi-ico">💬</span><span class="mi-txt">Corea venció 2-1 a Chequia. México goleó 2-0 a Sudáfrica. La cancha del BBVA va a estar de lado de Corea — el público mexicano los va a apoyar contra Sudáfrica.</span></div>
+        <span class="mbadge" style="background:var(--az)">🔵 ESTADIO BBVA · MONTERREY</span>
+      </div>
+    </div>
+  </div>
+  <div class="wbox">
+    <strong>⚠ Antes de cada partido:</strong> Lleguen al estadio con mínimo <strong>2 horas de anticipación</strong> — los controles de seguridad del Mundial son extensos. Lleven el tique en el celular Y impreso como respaldo. Usen siempre <strong>Uber o transporte oficial FIFA</strong>, nunca taxis de calle. El Estadio Akron queda en Zapopan (~30 min en Uber desde el centro de GDL). El BBVA queda en Guadalupe, NL (~20 min del centro de MTY).
+  </div>
+</div>
+</section>
+
+<div class="cdiv"></div>
+
+<!-- FAN FEST -->
+<section class="sec sec-dk" id="fanfest">
+<div class="w">
+  <span class="sec-lbl">Evento oficial FIFA</span>
+  <h2 class="sec-title w2">FIFA FAN FESTIVAL™ 2026</h2>
+  <p class="sec-desc">El evento oficial para vivir el Mundial sin tique de estadio. Pantallas gigantes, conciertos en vivo, gastronomía y la energía del torneo en la calle. Entrada general <strong style="color:var(--am)">GRATIS</strong> en ambas ciudades.</p>
+  <div class="ff-hero">
+    <img src="https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Fan Fest concierto">
+    <div class="ff-ov">
+      <div class="ff-t">FIFA<br><span>FAN FEST</span></div>
+      <p class="ff-s">Conciertos: <strong style="color:var(--am)">Chayanne · Imagine Dragons · Grupo Firme · Enrique Iglesias</strong> en Monterrey. Pantallas gigantes en Guadalajara para ver el partido de Colombia.</p>
+    </div>
+  </div>
+  <div class="ff-grid">
+    <div class="ffc">
+      <span class="fftag">Guadalajara</span>
+      <h4>Plaza Liberación · Centro Histórico</h4>
+      <p>En el corazón de la ciudad, rodeada por la Catedral, el Teatro Degollado y el Palacio de Gobierno. Gratis con registro previo en <strong style="color:var(--am)">FIFA.com</strong>. Alcohol permitido. El 23 de junio pongan las pantallas gigantes para ver el partido de Colombia — es la experiencia mundialista total sin tique de estadio.</p>
+    </div>
+    <div class="ffc">
+      <span class="fftag">Monterrey</span>
+      <h4>Parque Fundidora · 34 Días</h4>
+      <p>Antigua siderúrgica convertida en el epicentro del Mundial en MTY. <strong style="color:var(--am)">Sin registro previo</strong> — primero en llegar, primero en entrar. Zonas premium por Ticketmaster.com.mx. Más de 40 shows en vivo durante el torneo. Meta: 2 millones de fans. El día del partido Corea vs Sudáfrica (24 jun) el ambiente va a ser épico.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<div class="cdiv"></div>
+
+<!-- GUADALAJARA LUGARES -->
+<section class="sec" id="guadalajara" style="background:#fff">
+<div class="w">
+  <span class="sec-lbl">Primera parada · 21-23 Junio</span>
+  <div class="ch">
+    <img src="https://images.pexels.com/photos/3617500/pexels-photo-3617500.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Guadalajara">
+    <div class="ch-txt">
+      <h2>GUADALAJARA</h2>
+      <p>La Perla Tapatía · Jalisco · Cuna del mariachi, el tequila y la charrería · Elegida por Condé Nast Traveler como uno de los mejores destinos de 2026 en Norteamérica</p>
+    </div>
+  </div>
+  <p class="sec-desc" style="margin-bottom:32px">Los tapatíos son increíblemente cálidos — casi como colombianos. La combinación de barrios coloniales, gastronomía de clase mundial, vida nocturna y la cercanía al Pueblo Mágico de Tequila la hacen perfecta para los días antes y después del partido del 23.</p>
+
+  <div class="stab stab-ve">📍 Lugares que ver en Guadalajara</div>
+
+  <div class="pg">
+
+    <!-- 1. Centro Histórico -->
+    <div class="pc">
+      <div class="ppg4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Guadalajara_cathedral_2010.jpg/800px-Guadalajara_cathedral_2010.jpg" alt="Catedral GDL" onerror="this.src='https://images.pexels.com/photos/3617500/pexels-photo-3617500.jpeg?auto=compress&cs=tinysrgb&w=400'">
+        <img src="https://images.pexels.com/photos/3617500/pexels-photo-3617500.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Plaza GDL">
+        <img src="https://images.pexels.com/photos/2079249/pexels-photo-2079249.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Palacio Gobierno">
+        <img src="https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Centro GDL noche">
+      </div>
+      <div class="pb">
+        <div class="pmeta"><span class="tdur">⏱ 3–4 horas</span><span class="tpri">💰 Gratis</span></div>
+        <h3>Centro Histórico</h3>
+        <p>El alma de Guadalajara en pocas cuadras. La Catedral con sus dos torres amarillas es el punto de partida; a su alrededor se despliegan cuatro plazas interconectadas que forman una cruz única en el mundo.</p>
+        <ul>
+          <li><strong>Catedral de Guadalajara</strong> — Construida desde 1558, mezcla estilos gótico, barroco y neoclásico. Entren al interior, la arquitectura es impactante. Gratis.</li>
+          <li><strong>Plaza de Armas</strong> — La plaza principal con quiosco de hierro francés del siglo XIX. Los fines de semana hay mariachis espontáneos.</li>
+          <li><strong>Palacio de Gobierno</strong> — Entren GRATIS a ver los murales de José Clemente Orozco en la escalera principal. Son impresionantes y pocos turistas los conocen.</li>
+          <li><strong>Plaza Liberación</strong> — Sede del Fan Fest FIFA. Vista directa al Teatro Degollado con la Catedral de fondo — la foto clásica de GDL.</li>
+          <li><strong>Teatro Degollado</strong> — Arquitectura neoclásica de 1866. Si hay función durante su estadía, vayan.</li>
+        </ul>
+        <div class="ptip">★ Madrugar paga: la Catedral al amanecer con luz dorada es la foto del viaje. Lleguen a las 7 AM.</div>
+      </div>
+    </div>
+
+    <!-- 2. Hospicio Cabañas -->
+    <div class="pc">
+      <div class="ppg4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Hospicio_Caba%C3%B1as_-_panoramio_-_PnP_%281%29.jpg/800px-Hospicio_Caba%C3%B1as_-_panoramio_-_PnP_%281%29.jpg" alt="Hospicio Cabañas" onerror="this.src='https://images.pexels.com/photos/1579253/pexels-photo-1579253.jpeg?auto=compress&cs=tinysrgb&w=400'">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Orozco_Man_of_Fire.jpg/600px-Orozco_Man_of_Fire.jpg" alt="Hombre de Fuego Orozco" onerror="this.src='https://images.pexels.com/photos/3617500/pexels-photo-3617500.jpeg?auto=compress&cs=tinysrgb&w=400'">
+        <img src="https://images.pexels.com/photos/1579253/pexels-photo-1579253.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Hospicio interior">
+        <img src="https://images.pexels.com/photos/2611986/pexels-photo-2611986.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Murales Orozco">
+      </div>
+      <div class="pb">
+        <div class="pmeta"><span class="tdur">⏱ 1.5–2 horas</span><span class="tpri">💰 $100 MXN · $21k COP</span></div>
+        <h3>Hospicio Cabañas · UNESCO</h3>
+        <p>Patrimonio Cultural de la Humanidad. Un antiguo hospicio del siglo XIX que hoy alberga la obra maestra de José Clemente Orozco: 57 murales al fresco que cubren techos y paredes, incluyendo el célebre "El Hombre de Fuego".</p>
+        <ul>
+          <li><strong>El Hombre de Fuego</strong> — El mural central del techo de la capilla es considerado uno de los más importantes del siglo XX. Acuéstense en el suelo o alquilen el casco reclinable para verlo bien.</li>
+          <li>Orozco usó el cuerpo humano para narrar la conquista, la independencia y la modernidad de México. Brutal y poderoso.</li>
+          <li>El edificio mismo (104 patios, 2,000 arcos) es una obra arquitectónica extraordinaria.</li>
+          <li>A 5 minutos caminando desde la Plaza Liberación — combínenlo el mismo día.</li>
+        </ul>
+        <div class="ptip">★ No lo salten aunque solo tengan 1 hora libre. Es el equivalente mexicano de la Capilla Sixtina.</div>
+      </div>
+    </div>
+
+    <!-- 3. Tlaquepaque -->
+    <div class="pc">
+      <div class="ppg4">
+        <img src="https://images.pexels.com/photos/2356059/pexels-photo-2356059.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Tlaquepaque calles">
+        <img src="https://images.pexels.com/photos/3407777/pexels-photo-3407777.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Artesanias">
+        <img src="https://images.pexels.com/photos/4553027/pexels-photo-4553027.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Ceramica talavera">
+        <img src="https://images.pexels.com/photos/2883049/pexels-photo-2883049.jpeg?auto=compress&cs=tinysrgb&w=400" alt="El Parian">
+      </div>
+      <div class="pb">
+        <div class="pmeta"><span class="tdur">⏱ 3–5 horas</span><span class="tpri">💰 Gratis + compras</span></div>
+        <h3>Tlaquepaque</h3>
+        <p>El barrio artesanal más famoso de Jalisco, a 20 minutos del centro en Uber. Calles empedradas llenas de talleres de cerámica talavera, vidrio soplado, ropa de diseñador, cuero y joyería. El ambiente es relajado y muy fotogénico.</p>
+        <ul>
+          <li><strong>El Parián</strong> — La plaza central con mesitas alrededor y mariachis tocando en vivo todo el día. Pidan un tequila o una chelada y disfruten.</li>
+          <li><strong>Cerámica Suro</strong> — Taller interactivo donde crean su propia pieza guiados por artistas ($400–700 MXN). Experiencia única.</li>
+          <li><strong>Calle Independencia</strong> — La calle peatonal principal con galerías y tiendas de alto nivel. Para traer regalos: cerámica, vidrio, textiles.</li>
+          <li><strong>Tonalá</strong> — A 5 minutos, más artesanal y económico. Jueves y domingos: tianguis enorme con todo tipo de artesanías.</li>
+        </ul>
+        <div class="ptip">★ Ideal para la tarde del 22 de junio, el día antes del partido. Vuelvan al hotel con tiempo para descansar.</div>
+      </div>
+    </div>
+
+    <!-- 4. Tequila -->
+    <div class="pc">
+      <div class="ppg4">
+        <img src="https://images.pexels.com/photos/3407777/pexels-photo-3407777.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Agave azul">
+        <img src="https://images.pexels.com/photos/4553027/pexels-photo-4553027.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Destileria">
+        <img src="https://images.pexels.com/photos/2883049/pexels-photo-2883049.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Barriles tequila">
+        <img src="https://images.pexels.com/photos/461382/pexels-photo-461382.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Tequila shots">
+      </div>
+      <div class="pb">
+        <div class="pmeta"><span class="tdur">⏱ Todo el día</span><span class="tpri">💰 $400–800 MXN/pp</span></div>
+        <h3>Pueblo de Tequila</h3>
+        <p>A 60 km de Guadalajara, el Pueblo Mágico donde nació la bebida que conquistó el mundo. Los campos de agave azul son Patrimonio de la Humanidad (UNESCO). Plan ideal para un día completo de los tres.</p>
+        <ul>
+          <li><strong>José Cuervo Express</strong> — Tren turístico que sale viernes, sábados y domingos desde la Estación del Ferrocarril en GDL (~10 AM). Incluye transporte, guía, degustación y visita a La Rojeña. $1,200–$2,500 MXN/pp según paquete.</li>
+          <li><strong>Casa Sauza / Herradura</strong> — Alternativas con tours más íntimos. Reserven con anticipación.</li>
+          <li><strong>El pueblo</strong> — Calles coloniales blancas y rojas, iglesia del siglo XVII, mercado de artesanías. Tour a pie post-destilería.</li>
+          <li>En bus desde la Terminal Nueva: $80 MXN solo, sin tour incluido.</li>
+        </ul>
+        <div class="ptip">★ Para 3 personas el tren es lo más cómodo. Reserven en jose-cuervo.com — en época de Mundial se llena rápido.</div>
+      </div>
+    </div>
+
+    <!-- 5. Lago Chapala -->
+    <div class="pc">
+      <div class="ppg4">
+        <img src="https://images.pexels.com/photos/1666021/pexels-photo-1666021.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Lago Chapala">
+        <img src="https://images.pexels.com/photos/3265460/pexels-photo-3265460.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Atardecer lago">
+        <img src="https://images.pexels.com/photos/2265876/pexels-photo-2265876.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Pueblo Ajijic">
+        <img src="https://images.pexels.com/photos/1705293/pexels-photo-1705293.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Lancha lago">
+      </div>
+      <div class="pb">
+        <div class="pmeta"><span class="tdur">⏱ Todo el día</span><span class="tpri">💰 $200–400 MXN/pp</span></div>
+        <h3>Lago de Chapala</h3>
+        <p>El lago natural más grande de México, a 65 km de Guadalajara. Un escape perfecto si quieren un día tranquilo. El pueblo de Ajijic, a orillas del lago, tiene comunidad artística vibrante y uno de los atardeceres más bonitos de Jalisco.</p>
+        <ul>
+          <li><strong>Malecón de Chapala</strong> — Paseo a orillas del lago con restaurantes de mariscos y ceviche de carpa (especialidad local).</li>
+          <li><strong>Ajijic</strong> — Pueblo bohemio con galerías de arte, cafés pintorescos, calles empedradas de colores y artesanos locales. A 7 km de Chapala.</li>
+          <li><strong>Paseo en lancha</strong> — Por $150–200 MXN los llevan a la Isla de los Alacranes (deshabitada, solo pelícanos y aves).</li>
+          <li>Transporte: autobús desde la Central Nueva de GDL ($50–80 MXN ida).</li>
+        </ul>
+        <div class="ptip">★ Perfecto para el 21 de junio, primer día en GDL. Plan tranquilo para aclimatar después del vuelo.</div>
+      </div>
+    </div>
+
+    <!-- 6. Colonia Americana -->
+    <div class="pc">
+      <div class="ppg4">
+        <img src="https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Colonia Americana">
+        <img src="https://images.pexels.com/photos/1579253/pexels-photo-1579253.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Cafe especialidad">
+        <img src="https://images.pexels.com/photos/2079249/pexels-photo-2079249.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Templo Expiatorio">
+        <img src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Vida nocturna">
+      </div>
+      <div class="pb">
+        <div class="pmeta"><span class="tdur">⏱ 2–4 horas</span><span class="tpri">💰 Gratis (consumo aparte)</span></div>
+        <h3>Colonia Americana</h3>
+        <p>La zona más cosmopolita y moderna de Guadalajara. Calles arboladas del siglo XX, arquitectura ecléctica, cafés de especialidad reconocidos internacionalmente, restaurantes de autor y el mayor movimiento nocturno de la ciudad.</p>
+        <ul>
+          <li><strong>Templo Expiatorio</strong> — Catedral neogótica en construcción desde 1897 con vidrios emplomados europeos y un reloj de figuras mecánicas. Gratis. Una de las más impresionantes de México.</li>
+          <li><strong>MUSA (Museo de las Artes UdG)</strong> — Arte contemporáneo con murales de Orozco en el vestíbulo. Entrada económica.</li>
+          <li><strong>Av. Chapultepec</strong> — Los domingos cierra al tráfico para ciclovías. Llena de food trucks, artistas y gente.</li>
+          <li><strong>Vida nocturna</strong> — Es la mejor zona para la noche después del partido del 23 de junio. Docenas de bares y cantinas hasta el amanecer.</li>
+        </ul>
+        <div class="ptip">★ Noche del partido de Colombia (23 jun): si ganan, la Colonia Americana se convierte en una fiesta masiva. Vayan para allá.</div>
+      </div>
+    </div>
+
+  </div><!-- /pg GDL -->
+</div>
+</section>
+
+<!-- GDL COMIDA -->
+<section class="sec" id="gdl-food" style="background:#F8F9FE">
+<div class="w">
+  <div class="rh2">
+    <h2>DÓNDE COMER EN GUADALAJARA</h2>
+    <span class="fbadge fbadge-ve">🌮 Gastronomía Tapatía</span>
+  </div>
+  <div class="gh">
+    <img src="https://images.pexels.com/photos/2092897/pexels-photo-2092897.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Comida mexicana">
+    <img src="https://images.pexels.com/photos/4958641/pexels-photo-4958641.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Tacos">
+    <img src="https://images.pexels.com/photos/5848517/pexels-photo-5848517.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Birria">
+    <img src="https://images.pexels.com/photos/461382/pexels-photo-461382.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Tequila">
+  </div>
+  <div class="gbox">
+    <strong>🌶 Obligatorio en Guadalajara:</strong> <strong>Torta Ahogada</strong> — el sándwich más icónico de GDL: birote de puerco bañado en salsa de chile de árbol. Pídanla "bien ahogada" · <strong>Birria de Res</strong> — taco de carne en consomé especiado, para mojar · <strong>Carne en su Jugo</strong> — caldo con carne, tocino y frijoles · <strong>Tejuino</strong> — bebida de maíz fermentado con limón y sal helado. Rarísima pero hay que probarla.
+  </div>
+  <div class="rg">
+
+    <div class="rc">
+      <div class="rp">
+        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Xokol platos">
+        <img src="https://images.pexels.com/photos/699953/pexels-photo-699953.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Xokol interior">
+      </div>
+      <div class="rb">
+        <div class="rt">⭐ Alta Cocina de Raíz · Barrio Santa Tere</div>
+        <div class="rn">Xokol</div>
+        <div class="rd">Reconocido por Condé Nast Traveler 2026. Los chefs Xrysw Ruelas y Óscar Segundo reinterpretan ingredientes prehispánicos: maíz azul, chapulines, flores comestibles y chiles ancestrales. Una experiencia que no existe en ningún otro lugar de México.</div>
+        <div class="rmust"><strong>Pidan:</strong> El menú degustación (7 tiempos). Reserven con semanas de anticipación.</div>
+        <div class="rpr"><span class="pmx">$500–900 MXN/pp</span><span class="pco">$105k–189k COP/pp</span></div>
+      </div>
+    </div>
+
+    <div class="rc">
+      <div class="rp">
+        <img src="https://images.pexels.com/photos/3763847/pexels-photo-3763847.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Mariscos">
+        <img src="https://images.pexels.com/photos/566345/pexels-photo-566345.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Ostiones">
+      </div>
+      <div class="rb">
+        <div class="rt">🦪 Mariscos de Temporada</div>
+        <div class="rn">La Docena</div>
+        <div class="rd">El marisquero más popular de GDL. Ostiones Kumamoto frescos, aguachile negro, ceviche de pulpo, tostadas de atún. Ambiente bullicioso y animado. Siempre lleno de locales a mediodía.</div>
+        <div class="rmust"><strong>Pidan:</strong> Una docena de ostiones + aguachile negro + michelada bien preparada.</div>
+        <div class="rpr"><span class="pmx">$300–600 MXN/pp</span><span class="pco">$63k–126k COP/pp</span></div>
+      </div>
+    </div>
+
+    <div class="rc">
+      <div class="rp">
+        <img src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Hueso decoracion">
+        <img src="https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Hueso interior">
+      </div>
+      <div class="rb">
+        <div class="rt">🦴 Cocina de Autor · Visual Único</div>
+        <div class="rn">Hueso</div>
+        <div class="rd">Decorado con 10,000 huesos de animales en paredes y techo. Uno de los restaurantes más fotografiados de México y también uno de los mejores. Cocina de autor con proteínas como protagonistas.</div>
+        <div class="rmust"><strong>Pidan:</strong> Tuétano con pan + cochinito negro. La foto del interior es absolutamente obligatoria.</div>
+        <div class="rpr"><span class="pmx">$500–900 MXN/pp</span><span class="pco">$105k–189k COP/pp</span></div>
+      </div>
+    </div>
+
+    <div class="rc">
+      <div class="rp">
+        <img src="https://images.pexels.com/photos/2092897/pexels-photo-2092897.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Alcalde cocina">
+        <img src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Alcalde">
+      </div>
+      <div class="rb">
+        <div class="rt">👨‍🍳 Contemporáneo Mexicano</div>
+        <div class="rn">Alcalde</div>
+        <div class="rd">Del chef Francisco Ruano. Cocina mexicana de temporada con ingredientes locales de Jalisco. Ambiente elegante sin pretensiones. Considerado entre los mejores 20 restaurantes de México por varias guías especializadas.</div>
+        <div class="rmust"><strong>Pidan:</strong> Lo que sea de temporada — el menú cambia mensualmente según el producto local.</div>
+        <div class="rpr"><span class="pmx">$600–1,000 MXN/pp</span><span class="pco">$126k–210k COP/pp</span></div>
+      </div>
+    </div>
+
+    <div class="rc">
+      <div class="rp">
+        <img src="https://images.pexels.com/photos/4958792/pexels-photo-4958792.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Torta ahogada">
+        <img src="https://images.pexels.com/photos/4553030/pexels-photo-4553030.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Tortas Tono">
+      </div>
+      <div class="rb">
+        <div class="rt">🥖 Clásico desde 1983</div>
+        <div class="rn">Tortas Toño</div>
+        <div class="rd">La torta ahogada definitiva desde los años 80. El birote (pan crujiente solo de GDL) se rellena de puerco y se baña en salsa de jitomate y chile de árbol. Pídanla "bien ahogada" — que el pan esté completamente empapado.</div>
+        <div class="rmust"><strong>Pidan:</strong> Torta bien ahogada + agua de tamarindo. Experiencia completa por ~$100 MXN.</div>
+        <div class="rpr"><span class="pmx">$80–150 MXN</span><span class="pco">$17k–32k COP</span></div>
+      </div>
+    </div>
+
+    <div class="rc">
+      <div class="rp">
+        <img src="https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Mercado">
+        <img src="https://images.pexels.com/photos/2306281/pexels-photo-2306281.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Comida mercado">
+      </div>
+      <div class="rb">
+        <div class="rt">🏪 Mercado · Presupuesto</div>
+        <div class="rn">Mercado San Juan de Dios</div>
+        <div class="rd">El mercado techado más grande de América Latina: 3 pisos, miles de locales, comida de todo tipo, artesanías y ropa. Perfecto para desayuno o almuerzo rápido a precios mínimos.</div>
+        <div class="rmust"><strong>Pidan:</strong> Birria con consomé o pozole rojo desde $60 MXN. Sigan el olor de los puestos más concurridos.</div>
+        <div class="rpr"><span class="pmx">$50–120 MXN</span><span class="pco">$11k–25k COP</span></div>
+      </div>
+    </div>
+
+  </div><!-- /rg GDL -->
+</div>
+</section>
+
+<div class="cdiv"></div>
+
+<!-- MONTERREY LUGARES -->
+<section class="sec" id="monterrey" style="background:#fff">
+<div class="w">
+  <span class="sec-lbl">Segunda parada · 24-28 Junio</span>
+  <div class="ch mty">
+    <img src="https://images.pexels.com/photos/3889742/pexels-photo-3889742.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Monterrey">
+    <div class="ch-txt">
+      <h2>MONTERREY</h2>
+      <p>La Sultana del Norte · Nuevo León · Ciudad industrial, moderna y cosmopolita rodeada por la Sierra Madre · Cerro de la Silla como símbolo absoluto · Calor intenso en junio (30–38°C)</p>
+    </div>
+  </div>
+  <p class="sec-desc" style="margin-bottom:32px">Monterrey es directa, trabajadora y orgullosa — la ciudad más "norte" de México. Su identidad gastronómica gira alrededor del cabrito y la carne asada. Combina arquitectura industrial reconvertida (Fundidora), naturaleza extrema (La Huasteca, Grutas de García, Cola de Caballo) y una zona moderna de clase mundial en San Pedro Garza García.</p>
+
+  <div class="stab stab-az">📍 Lugares que ver en Monterrey</div>
+
+  <div class="pg">
+
+    <!-- 1. Fundidora -->
+    <div class="pc">
+      <div class="ppg4">
+        <img src="https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Fundidora">
+        <img src="https://images.pexels.com/photos/3889742/pexels-photo-3889742.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Parque Fundidora">
+        <img src="https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Fundidora interior">
+        <img src="https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Concierto Fan Fest">
+      </div>
+      <div class="pb">
+        <div class="pmeta"><span class="tdur">⏱ 2–5 horas</span><span class="tpri">💰 Gratis (actividades aparte)</span></div>
+        <h3>Parque Fundidora + Fan Fest</h3>
+        <p>La antigua Fundidora de Acero de Monterrey (1900–1986) transformada en el parque urbano más impresionante del norte de México. 140 hectáreas con los altos hornos convertidos en museos. <strong>Sede del FIFA Fan Fest 2026.</strong></p>
+        <ul>
+          <li><strong>Horno 3 (Museo del Acero)</strong> — Tour interactivo dentro de un alto horno real. Escenografía espectacular que explica la historia del acero regiomontano ($150 MXN). No se lo pierdan.</li>
+          <li><strong>Estadio Stage (Fan Fest)</strong> — El escenario de los conciertos de Chayanne, Imagine Dragons y Enrique Iglesias durante el Mundial.</li>
+          <li><strong>Tirolesa y actividades</strong> — Para quienes quieran adrenalina dentro del parque.</li>
+          <li>El parque es enorme — alquilen bicicleta o patines para recorrerlo ($80–120 MXN/hora).</li>
+        </ul>
+        <div class="ptip">★ El día 24 de junio (partido de Corea vs Sudáfrica) lleguen temprano al Fan Fest de Fundidora para un buen puesto frente a las pantallas gigantes.</div>
+      </div>
+    </div>
+
+    <!-- 2. Macroplaza -->
+    <div class="pc">
+      <div class="ppg4">
+        <img src="https://images.pexels.com/photos/2079249/pexels-photo-2079249.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Macroplaza">
+        <img src="https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Faro Comercio">
+        <img src="https://images.pexels.com/photos/2611986/pexels-photo-2611986.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Catedral MTY">
+        <img src="https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&w=400" alt="MARCO museo">
+      </div>
+      <div class="pb">
+        <div class="pmeta"><span class="tdur">⏱ 2–3 horas</span><span class="tpri">💰 Gratis</span></div>
+        <h3>Macroplaza & Centro Histórico</h3>
+        <p>Una de las plazas cívicas más grandes del mundo (40 hectáreas), flanqueada por los edificios más importantes de Monterrey. El Faro del Comercio de noche es una de las imágenes más icónicas del país.</p>
+        <ul>
+          <li><strong>Faro del Comercio</strong> — La escultura naranja de Luis Barragán (1984) que de noche lanza un rayo láser naranja visible desde toda la ciudad. Foto nocturna obligatoria.</li>
+          <li><strong>Catedral Metropolitana</strong> — Del siglo XVII, la más antigua de Nuevo León. Imponente frente a la Macroplaza.</li>
+          <li><strong>MARCO (Museo de Arte Contemporáneo)</strong> — Una de las mejores colecciones de arte latinoamericano del norte de México. La paloma de Juan Soriano en la entrada es otro ícono ($100 MXN).</li>
+          <li><strong>Museo de Historia Mexicana</strong> — Justo al lado, con entrada de bajo costo o gratuita.</li>
+        </ul>
+        <div class="ptip">★ El Faro del Comercio enciende su rayo láser al anochecer — coordinen para verlo de noche desde la Macroplaza. Foto épica garantizada.</div>
+      </div>
+    </div>
+
+    <!-- 3. Cerro de la Silla -->
+    <div class="pc">
+      <div class="ppg4">
+        <img src="https://images.pexels.com/photos/1366909/pexels-photo-1366909.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Cerro Silla">
+        <img src="https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Senderismo">
+        <img src="https://images.pexels.com/photos/3617457/pexels-photo-3617457.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Vista ciudad MTY">
+        <img src="https://images.pexels.com/photos/1366909/pexels-photo-1366909.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Sierra Madre">
+      </div>
+      <div class="pb">
+        <div class="pmeta"><span class="tdur">⏱ 3–5 horas</span><span class="tpri">💰 Gratis</span></div>
+        <h3>Cerro de la Silla</h3>
+        <p>El símbolo absoluto de Monterrey. Su silueta inconfundible en forma de silla de montar aparece en el escudo de la ciudad y en cada postal. Se puede subir por varias rutas de senderismo o admirar desde los miradores.</p>
+        <ul>
+          <li><strong>Ruta Norte</strong> — La más popular y accesible. Sale desde el Parque Cerro de la Silla. 4–5 horas ida y vuelta. Nivel medio. Vistas espectaculares de toda la ciudad desde la cima.</li>
+          <li><strong>Mirador La Estanzuela</strong> — Vista panorámica sin subir hasta la cima. A 20 min en Uber del centro.</li>
+          <li><strong>Foto clásica desde la Macroplaza</strong> — Si no quieren subir, la foto con el Cerro de fondo desde la Macroplaza es la imagen más icónica de MTY.</li>
+          <li>El parque al pie del cerro tiene senderos señalizados y entrada libre.</li>
+        </ul>
+        <div class="ptip">★ En junio el calor es extremo. Si hacen senderismo: salgan antes de las 6:30 AM, lleven 2L de agua por persona y protector solar FPS 50+.</div>
+      </div>
+    </div>
+
+    <!-- 4. Paseo Santa Lucía -->
+    <div class="pc">
+      <div class="ppg4">
+        <img src="https://images.pexels.com/photos/2422264/pexels-photo-2422264.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Canal Santa Lucia">
+        <img src="https://images.pexels.com/photos/1705293/pexels-photo-1705293.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Bote canal">
+        <img src="https://images.pexels.com/photos/2265876/pexels-photo-2265876.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Paseo nocturno">
+        <img src="https://images.pexels.com/photos/3889742/pexels-photo-3889742.jpeg?auto=compress&cs=tinysrgb&w=400" alt="MTY reflejo">
+      </div>
+      <div class="pb">
+        <div class="pmeta"><span class="tdur">⏱ 1–2 horas</span><span class="tpri">💰 Gratis / $80–120 MXN bote</span></div>
+        <h3>Paseo Santa Lucía</h3>
+        <p>Canal artificial de 2.5 km que conecta la Macroplaza con el Parque Fundidora. Una de las obras urbanas más elegantes de Monterrey. Caminable o en bote panorámico.</p>
+        <ul>
+          <li><strong>Paseo en bote</strong> — El recorrido completo dura ~45 minutos ($80–120 MXN/pp). Sale desde ambos extremos del canal.</li>
+          <li><strong>Arte urbano</strong> — El canal está bordeado de murales, esculturas y jardines perfectamente iluminados de noche.</li>
+          <li><strong>Restaurantes en la orilla</strong> — Terrazas con vista al agua. Perfecto para cenar después de un día largo de turismo.</li>
+          <li>Es la mejor forma de conectar la Macroplaza con Fundidora sin gastar en Uber.</li>
+        </ul>
+        <div class="ptip">★ De noche, con las luces del canal reflejadas y el Cerro de la Silla iluminado al fondo, es una de las imágenes más bonitas de toda MTY.</div>
+      </div>
+    </div>
+
+    <!-- 5. Grutas de García -->
+    <div class="pc">
+      <div class="ppg4">
+        <img src="https://images.pexels.com/photos/2480072/pexels-photo-2480072.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Caverna">
+        <img src="https://images.pexels.com/photos/3694826/pexels-photo-3694826.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Estalactitas">
+        <img src="https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Sierra teleférico">
+        <img src="https://images.pexels.com/photos/3617457/pexels-photo-3617457.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Vista desde cima">
+      </div>
+      <div class="pb">
+        <div class="pmeta"><span class="tdur">⏱ Medio día</span><span class="tpri">💰 $200–350 MXN · $42k–74k COP</span></div>
+        <h3>Grutas de García</h3>
+        <p>Cavernas de más de 60 millones de años en el municipio de García, a 45 minutos de Monterrey. Descubiertas en 1843. El acceso es por teleférico panorámico con vistas impresionantes a la Sierra Madre.</p>
+        <ul>
+          <li>El tour guiado recorre 16 salones con formaciones únicas de estalactitas y estalagmitas, algunas de varios metros de altura.</li>
+          <li><strong>Teleférico</strong> — La subida en teleférico tiene vistas de 360° a la Sierra. La experiencia comienza antes de entrar a las cuevas.</li>
+          <li><strong>Temperatura interior: ~18°C</strong> — Un alivio cuando afuera son 38 grados. Lleven chaqueta ligera.</li>
+          <li>Para llegar: tour organizado desde MTY (~$300 MXN/pp todo incluido) o Uber directo a García.</li>
+        </ul>
+        <div class="ptip">★ Plan ideal para la mañana del 25 de junio. El fresco de las cavernas es un descanso perfecto después del calor del partido.</div>
+      </div>
+    </div>
+
+    <!-- 6. La Huasteca -->
+    <div class="pc">
+      <div class="ppg4">
+        <img src="https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg?auto=compress&cs=tinysrgb&w=400" alt="La Huasteca canon">
+        <img src="https://images.pexels.com/photos/3617457/pexels-photo-3617457.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Roca caliza">
+        <img src="https://images.pexels.com/photos/1366909/pexels-photo-1366909.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Paisaje desierto">
+        <img src="https://images.pexels.com/photos/2480072/pexels-photo-2480072.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Huasteca paisaje">
+      </div>
+      <div class="pb">
+        <div class="pmeta"><span class="tdur">⏱ 3–5 horas</span><span class="tpri">💰 Gratis</span></div>
+        <h3>Parque La Huasteca</h3>
+        <p>200 hectáreas de montañas de caliza en la Sierra Madre, a solo 20 minutos del centro de Monterrey. Uno de los destinos de aventura más accesibles de México — paisajes que parecen de otro mundo a minutos de la metrópoli.</p>
+        <ul>
+          <li><strong>Escalada en roca</strong> — Las paredes de caliza del cañón son de fama mundial. Hay guías locales que rentan equipo y dan clases básicas.</li>
+          <li><strong>Senderismo</strong> — Rutas de todos los niveles entre las peñas y el desierto. La ruta al Cañón de la Huasteca es la más impresionante.</li>
+          <li><strong>Ciclismo de montaña</strong> — La topografía es perfecta. Renta de bicicletas disponible en la entrada.</li>
+          <li>Entrada al parque: gratis. Lleguen en Uber desde el centro (~$100 MXN).</li>
+        </ul>
+        <div class="ptip">★ Salgan antes de las 8 AM para evitar el calor. El paisaje al amanecer con las peñas iluminadas es absolutamente espectacular.</div>
+      </div>
+    </div>
+
+  </div><!-- /pg MTY -->
+</div>
+</section>
+
+<!-- MTY COMIDA -->
+<section class="sec" id="mty-food" style="background:#F8F9FE">
+<div class="w">
+  <div class="rh2">
+    <h2>DÓNDE COMER EN MONTERREY</h2>
+    <span class="fbadge fbadge-az">🍖 Gastronomía Regiomontana</span>
+  </div>
+  <div class="gh">
+    <img src="https://images.pexels.com/photos/1893555/pexels-photo-1893555.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Carne asada">
+    <img src="https://images.pexels.com/photos/4958641/pexels-photo-4958641.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Cabrito">
+    <img src="https://images.pexels.com/photos/2611987/pexels-photo-2611987.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Corte regio">
+    <img src="https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Cerveza">
+  </div>
+  <div class="gbox">
+    <strong>🍖 Obligatorio en Monterrey:</strong> <strong>Cabrito al Pastor</strong> — el plato emblema de NL. Si van a MTY y no lo comen, técnicamente no fueron a Monterrey · <strong>Carne Asada regiomontana</strong> — más seca e intensa que la colombiana, con arrachera y machito · <strong>Machacado con Huevo</strong> — desayuno regio: carne seca deshebrada con huevo revuelto. Perfecto en la mañana · <strong>Fritada de Cabrito</strong> — vísceras estofadas, para valientes. Cervezas: <strong>Carta Blanca o Dos Equis</strong> — nacieron aquí.
+  </div>
+  <div class="rg" style="margin-top:6px">
+
+    <div class="rc">
+      <div class="rp">
+        <img src="https://images.pexels.com/photos/1893555/pexels-photo-1893555.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Cabrito asado">
+        <img src="https://images.pexels.com/photos/4958641/pexels-photo-4958641.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Cabrito El Cabrito">
+      </div>
+      <div class="rb">
+        <div class="rt az">🐐 Icónico Regiomontano desde 1963</div>
+        <div class="rn">El Cabrito</div>
+        <div class="rd">El restaurante más famoso de MTY para el plato más representativo de NL. Cabrito al pastor asado lentamente en leña, servido entero o por piezas. Ambiente de cantina tradicional, lleno de locales. Constitución 817 Ote., Centro.</div>
+        <div class="rmust"><strong>Pidan:</strong> Cabrito al pastor + riñonada + tortillas de harina. Para 3 pidan 2 cabritos y compartan. Con Carta Blanca bien fría.</div>
+        <div class="rpr"><span class="pmx">$350–600 MXN/pp</span><span class="pco">$74k–126k COP/pp</span></div>
+      </div>
+    </div>
+
+    <div class="rc">
+      <div class="rp">
+        <img src="https://images.pexels.com/photos/699953/pexels-photo-699953.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Pangea platos">
+        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Pangea interior">
+      </div>
+      <div class="rb">
+        <div class="rt az">⭐ Estrella Michelin 2024 · San Pedro GG</div>
+        <div class="rn">Pangea</div>
+        <div class="rd">El restaurante más premiado de Monterrey. Del chef Guillermo González Beristáin. Cocina contemporánea mexicana con técnicas internacionales. En la Guía Michelin desde su primera edición mexicana 2024. Para una noche muy especial.</div>
+        <div class="rmust"><strong>Pidan:</strong> El menú degustación de 8 tiempos con maridaje. Reserven con semanas de anticipación — sin reserva es imposible entrar.</div>
+        <div class="rpr"><span class="pmx">$800–1,500 MXN/pp</span><span class="pco">$168k–315k COP/pp</span></div>
+      </div>
+    </div>
+
+    <div class="rc">
+      <div class="rp">
+        <img src="https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Cafe Iguana bar">
+        <img src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Barrio Antiguo">
+      </div>
+      <div class="rb">
+        <div class="rt az">🍺 Bar Clásico · Barrio Antiguo desde 1990</div>
+        <div class="rn">Café Iguana & Barrio Antiguo</div>
+        <div class="rd">El bar más emblemático del Barrio Antiguo. Música en vivo de rock, blues y jazz, cervezas artesanales regiomontanas y ambiente bohemio. La zona del Barrio Antiguo (calles Morelos y Padre Mier) tiene decenas de opciones para una noche animada.</div>
+        <div class="rmust"><strong>Consejo:</strong> Barrio Antiguo es perfecto para recorrer varios bares en la misma noche. Empiecen aquí y vayan fluyendo por las calles.</div>
+        <div class="rpr"><span class="pmx">$100–250 MXN/pp</span><span class="pco">$21k–53k COP/pp</span></div>
+      </div>
+    </div>
+
+    <div class="rc">
+      <div class="rp">
+        <img src="https://images.pexels.com/photos/2092897/pexels-photo-2092897.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Chapulin">
+        <img src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Chapulin interior">
+      </div>
+      <div class="rb">
+        <div class="rt az">👨‍🍳 Alta Cocina Cosmopolita</div>
+        <div class="rn">Chapulín</div>
+        <div class="rd">Restaurante del Hotel Presidente InterContinental MTY. Cocina mexicana contemporánea de autor con ingredientes locales y técnicas internacionales. Ambiente elegante accesible, ideal como opción premium sin llegar al nivel de Pangea.</div>
+        <div class="rmust"><strong>Pidan:</strong> El menú de temporada y los cocktails de la barra — la mezcalería está entre las mejores de la ciudad.</div>
+        <div class="rpr"><span class="pmx">$500–900 MXN/pp</span><span class="pco">$105k–189k COP/pp</span></div>
+      </div>
+    </div>
+
+    <div class="rc">
+      <div class="rp">
+        <img src="https://images.pexels.com/photos/4958792/pexels-photo-4958792.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Tacos carne">
+        <img src="https://images.pexels.com/photos/1893555/pexels-photo-1893555.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Carne asada MTY">
+      </div>
+      <div class="rb">
+        <div class="rt az">🌮 Taquería de Calle · Experiencia Regia</div>
+        <div class="rn">Tacos de Carne Asada</div>
+        <div class="rd">En MTY la carne asada no se come en restaurante — se come en taquería de calle. Busquen cualquier local con humo saliendo de la arrachera o el costillar. En el Barrio Antiguo y cerca de Fundidora hay decenas de opciones excelentes.</div>
+        <div class="rmust"><strong>Pidan:</strong> Taco de arrachera + taco de machito + agua de horchata. Pregunten siempre por la salsa más picante que tengan.</div>
+        <div class="rpr"><span class="pmx">$25–60 MXN/taco</span><span class="pco">$5k–13k COP/taco</span></div>
+      </div>
+    </div>
+
+    <div class="rc">
+      <div class="rp">
+        <img src="https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Mercado">
+        <img src="https://images.pexels.com/photos/2306281/pexels-photo-2306281.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Mercado Juarez">
+      </div>
+      <div class="rb">
+        <div class="rt az">🏪 Mercado Central · Desayunos</div>
+        <div class="rn">Mercado Juárez</div>
+        <div class="rd">El mercado central de Monterrey, a pasos del centro histórico. Artesanías, comida rápida local y el ambiente más auténtico de la ciudad. Perfecto para el desayuno del mediodía cuando el calor arrecia y el presupuesto importa.</div>
+        <div class="rmust"><strong>Pidan:</strong> Gorditas de chicharrón, machacado con huevo, o menudo en cualquier puesto del interior.</div>
+        <div class="rpr"><span class="pmx">$50–120 MXN</span><span class="pco">$11k–25k COP</span></div>
+      </div>
+    </div>
+
+  </div><!-- /rg MTY -->
+</div>
+</section>
+
+<div class="cdiv"></div>
+
+<!-- TIPS -->
+<section class="sec sec-dk" id="tips">
+<div class="w">
+  <span class="sec-lbl">Para el viaje</span>
+  <h2 class="sec-title w2">TIPS PARA COLOMBIANOS EN MÉXICO</h2>
+  <p class="sec-desc">Lo que nadie les dice pero que van a necesitar desde el primer día.</p>
+  <div class="tg">
+
+    <div class="tc">
+      <div class="tc-ico">💵</div>
+      <h4>Dinero & Cambio</h4>
+      <ul>
+        <li><strong>No cambien en el aeropuerto</strong> — la tasa es pésima. Usen cajeros Bancomer o Banorte en el centro de la ciudad.</li>
+        <li>Nequi, Nu y Bancolombia con habilitación internacional funcionan muy bien en cajeros mexicanos.</li>
+        <li><strong>1 MXN ≈ 210 COP</strong> · $100k COP ≈ $476 MXN</li>
+        <li>Visa y Mastercard se aceptan en casi todo. Lleven algo de efectivo para mercados, taquerías y transporte en caso de fallo.</li>
+      </ul>
+    </div>
+
+    <div class="tc">
+      <div class="tc-ico">🗣</div>
+      <h4>Español MX vs CO</h4>
+      <div class="vg">
+        <div class="vi"><span class="mx">Órale / Chido</span><span class="co">= Dale / Chévere</span></div>
+        <div class="vi"><span class="mx">Güey / Wey</span><span class="co">= Parce (informal)</span></div>
+        <div class="vi"><span class="mx">Ahorita</span><span class="co">= Ahora o nunca (contexto)</span></div>
+        <div class="vi"><span class="mx">Torta</span><span class="co">= Sándwich (¡no postre!)</span></div>
+        <div class="vi"><span class="mx">Camión</span><span class="co">= Bus urbano</span></div>
+        <div class="vi"><span class="mx">Alberca</span><span class="co">= Piscina</span></div>
+        <div class="vi"><span class="mx">¿Qué onda?</span><span class="co">= ¿Qué más?</span></div>
+        <div class="vi"><span class="mx">No manches / Chale</span><span class="co">= No joda / Uy</span></div>
+      </div>
+    </div>
+
+    <div class="tc">
+      <div class="tc-ico">🔒</div>
+      <h4>Seguridad</h4>
+      <ul>
+        <li>Centro Histórico, Tlaquepaque y Col. Americana (GDL) + Barrio Antiguo, San Pedro y Fundidora (MTY) son zonas <strong>muy seguras para turistas</strong>.</li>
+        <li><strong>Siempre Uber</strong> — nunca taxis de calle en ninguna ciudad.</li>
+        <li>Pasaporte guardado en el hotel. Solo lleven la cédula y una tarjeta en el día.</li>
+        <li>Emergencias en todo México: <strong>911</strong>.</li>
+      </ul>
+    </div>
+
+    <div class="tc">
+      <div class="tc-ico">📋</div>
+      <h4>Documentos</h4>
+      <ul>
+        <li>Colombianos <strong>NO necesitan visa</strong> para México (turismo hasta 180 días).</li>
+        <li>Cédula colombiana válida o pasaporte sirven de igual forma.</li>
+        <li>La <strong>Forma Migratoria FMM</strong> la dan en el avión o en línea — guárdenla hasta que salgan del país.</li>
+        <li>Lleven tique de regreso para mostrar en migración. Anoten el nombre del hotel en el formulario.</li>
+      </ul>
+    </div>
+
+    <div class="tc">
+      <div class="tc-ico">📱</div>
+      <h4>Apps & Conectividad</h4>
+      <ul>
+        <li><strong>Uber</strong> — esencial, las 24h en GDL y MTY.</li>
+        <li><strong>Google Maps</strong> — descarguen GDL y MTY en modo offline antes de salir.</li>
+        <li><strong>México Invita</strong> — app oficial del Mundial 2026 para turistas.</li>
+        <li><strong>SIM local Telcel o AT&amp;T México</strong> — 1 semana de datos desde $150 MXN ($31k COP). Cómprenla en el aeropuerto mexicano.</li>
+        <li><strong>Ticketmaster México</strong> — para zonas premium del Fan Fest de Monterrey.</li>
+      </ul>
+    </div>
+
+    <div class="tc">
+      <div class="tc-ico">☀️</div>
+      <h4>Clima en Junio</h4>
+      <ul>
+        <li><strong>Guadalajara:</strong> 20–28°C. Temporada de lluvias — aguaceros vespertinos frecuentes (3–5 PM). Lleven impermeable compacto.</li>
+        <li><strong>Monterrey:</strong> 30–38°C. Calor INTENSO. Hidratación constante. Protector solar FPS 50+. Ropa muy ligera y colores claros.</li>
+        <li>En ambas ciudades: sol fuerte desde las 8 AM. Gafas de sol indispensables.</li>
+        <li>Para actividades al aire libre en MTY: <strong>antes de las 10 AM o después de las 5 PM</strong>.</li>
+      </ul>
+    </div>
+
+  </div><!-- /tips-grid -->
+
+  <div style="margin-top:40px;background:rgba(252,209,22,.1);border:2px solid var(--am);border-radius:14px;padding:26px 30px;text-align:center">
+    <p style="font-family:'Bebas Neue';font-size:24px;color:var(--am);margin-bottom:10px;letter-spacing:1px">LO MÁS IMPORTANTE DEL VIAJE</p>
+    <p style="color:rgba(255,255,255,.88);font-size:14.5px;line-height:1.75;max-width:680px;margin:0 auto">Como colombianos en México los van a tratar <strong style="color:var(--am)">increíble</strong>. Los mexicanos tienen un cariño enorme por Colombia, especialmente durante el Mundial. El acento bogotano combinado con la calidez mexicana genera amigos instantáneos. Disfruten cada plato, griten a Colombia, bailen con los mexicanos en el Fan Fest y hagan amigos — eso es exactamente lo que queda de un viaje así.</p>
+  </div>
+</div>
+</section>
+
+<!-- PRESUPUESTO -->
+<section class="sec" id="presupuesto" style="background:#fff">
+<div class="w">
+  <span class="sec-lbl">Referencia económica</span>
+  <h2 class="sec-title">PRESUPUESTO ESTIMADO</h2>
+  <p class="sec-desc">Para <strong>3 personas · 7 noches</strong> · Hoteles ya reservados · Tasa referencial: <strong>1 MXN = 210 COP</strong> (junio 2026)</p>
+  <table class="bt">
+    <thead><tr><th>Concepto</th><th>MXN (3 pp)</th><th>COP (3 pp)</th><th>COP / persona</th></tr></thead>
+    <tbody>
+      <tr><td>🍽 Comidas (3/día · 7 días · $300 MXN/pp promedio)</td><td>$6,300</td><td>$1,323,000</td><td>$441,000</td></tr>
+      <tr><td>🚗 Transporte Uber local (7 días · $200 MXN/día para los 3)</td><td>$1,400</td><td>$294,000</td><td>$98,000</td></tr>
+      <tr><td>✈ Vuelo GDL → MTY (3 tiquetes, económico)</td><td>$3,000</td><td>$630,000</td><td>$210,000</td></tr>
+      <tr><td>🏛 Actividades / museos / tours (Tequila Express, Grutas, Horno 3, etc.)</td><td>$4,500</td><td>$945,000</td><td>$315,000</td></tr>
+      <tr><td>🎉 Fan Fest zonas premium (Ticketmaster MTY, estimado)</td><td>$1,500</td><td>$315,000</td><td>$105,000</td></tr>
+      <tr><td>🎁 Artesanías y souvenirs (Tlaquepaque, Tonalá, mercados)</td><td>$2,000</td><td>$420,000</td><td>$140,000</td></tr>
+      <tr><td>📱 SIM local Telcel (3 personas, 1 semana c/u)</td><td>$450</td><td>$94,500</td><td>$31,500</td></tr>
+      <tr><td>🍺 Salidas nocturnas / bares post-partido (2 noches)</td><td>$1,800</td><td>$378,000</td><td>$126,000</td></tr>
+      <tr><td>🔧 Imprevistos (10%)</td><td>~$2,095</td><td>~$440,000</td><td>~$147,000</td></tr>
+    </tbody>
+    <tfoot><tr class="tot"><td><strong>TOTAL ESTIMADO (sin hotel ni vuelos internacionales)</strong></td><td><strong>~$23,045</strong></td><td><strong>~$4,840,000</strong></td><td><strong>~$1,613,000</strong></td></tr></tfoot>
+  </table>
+  <p style="font-size:11.5px;color:#999;margin-top:11px;font-style:italic">* Presupuesto estimado referencial. No incluye vuelos Colombia ↔ México ni hospedaje (ya reservados). En época de Mundial los precios tienden a subir un 20–40% vs temporada normal.</p>
+</div>
+</section>
+
+<footer>
+  <p>Guía preparada para <strong>Thomas Ariza</strong> &amp; compañía · Copa del Mundo FIFA 2026™ · Guadalajara &amp; Monterrey · Junio 2026</p>
+  <p style="margin-top:6px">⚽ 🇨🇴 ¡Que viva Colombia! · 🇲🇽 ¡Que viva México! · ¡Arriba el Mundial! 🏆</p>
+</footer>
+
+</body>
+</html>
